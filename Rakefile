@@ -11,8 +11,6 @@ task :default => 'spec:run'
 
 PROJ.name = 'colour'
 PROJ.authors = 'Wes Devauld'
-PROJ.email = 'http://devauld.ca' 
-PROJ.url = 'http://www.ihatework.ca/svn/colour/'
+PROJ.email = 'wes@devauld.ca' 
+PROJ.url = 'http://code.devauld.ca/git/colour/'
 PROJ.rubyforge_name = 'colour'
-
-PROJ.spec_opts << '--color'
