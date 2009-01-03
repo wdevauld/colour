@@ -35,7 +35,7 @@ module Colour
 
 	# Return the complementary colour	
 	def complementary
-		rotate_hue[180]
+		rotate_hue(180)
 	end
 	
 	# Return two colours spread distance apart opposite
