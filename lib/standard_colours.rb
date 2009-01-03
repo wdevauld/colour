@@ -1,4 +1,6 @@
 module StandardColoursRGB
+
+	# Using the definitions from http://en.wikipedia.org/wiki/List_of_colors
 	def alice_blue
 		RGB.new(0.941176, 0.972549, 1.000000)
 	end
@@ -7,6 +9,9 @@ module StandardColoursRGB
 	end
 	def amaranth
 		RGB.new(0.898039, 0.168627, 0.313725)
+	end
+	def amaranth_pink
+		RGB.new(0.945098, 0.611764, 0.733333)
 	end
 	def amber
 		RGB.new(1.000000, 0.749020, 0.000000)
@@ -23,8 +28,14 @@ module StandardColoursRGB
 	def aquamarine
 		RGB.new(0.498039, 1.000000, 0.831373)
 	end
+	def army_green
+		RGB.new(0.294117, 0.325490, 0.125490)
+	end
 	def asparagus
 		RGB.new(0.482353, 0.627451, 0.356863)
+	end
+	def atomic_tangerine
+		RGB.new(1.000000, 0.600000, 0.400000)
 	end
 	def auburn
 		RGB.new(0.435294, 0.207843, 0.101961)
