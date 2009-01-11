@@ -1,4 +1,5 @@
-== 1.0.0 / 2008-03-22
+== 0.3 / 2009-01-20
 
-* 1 major enhancement
-  * Birthday!
+* rSpec Testing 
+  * removed tests
+  * now spec driven 

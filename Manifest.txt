@@ -21,4 +21,3 @@ tasks/rubyforge.rake
 tasks/setup.rb
 tasks/spec.rake
 tasks/svn.rake
-test/test_colour.rb
