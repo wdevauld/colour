@@ -9,10 +9,6 @@ module Colour
 		self	
 	end
 
-	def to_cmyk
-		self
-	end
-
 	def to_hsv
 		self
 	end
@@ -132,7 +128,6 @@ end  # module Colour
 
 Colour.require_all_libs_relative_to __FILE__
 require 'rgb'
-require 'cmyk'
 require 'standard_colours'
 require 'hsv'
 

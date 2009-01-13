@@ -19,14 +19,6 @@ describe "every colour", :shared => true do
 
    it "should convert to Lab"
 
-   it "should convert to CMYK" do
-	# Values from Photoshop
-	@green.to_cmyk.c eql(0.63)
-	@green.to_cmyk.m eql(0.0)
- 	@green.to_cmyk.y eql(1.0)
-	@green.to_cmyk.k eql(0.0)
-   end
-
    it "should provide a Web Safe Hex" do
 	@green.web_safe.should eql("#0F0")
    end
@@ -48,14 +40,6 @@ describe "every colour", :shared => true do
 
    it "should generate triadic colours" do
    end
-end
-
-describe "CMYK Colours" do
-	it_should_behave_like "every colour"
-
-	before(:each) do
-	   @green = CMYK.new(0.63, 0, 1.0, 0) 
-	end
 end
 
 describe "HSV Colours" do

@@ -11,18 +11,6 @@ class RGB
 		@b = b.abs.to_f
 	end
   
-	def to_cmyk
-		min = [@r, @g, @b].min
-		if(min == 1) then
-			CMYK.new(0,0,0,1)
-		else
-			CMYK.new(((1-@r) - min)/(1-min),
-				((1-@g) - min)/(1-min),
-				((1-@b) - min)/(1-min),
-				min)
-		end
-	end
-
 	def to_hsv
 		min = [@r, @g, @b].min
 		max = [@r, @g, @b].max
