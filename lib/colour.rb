@@ -89,7 +89,7 @@ module Colour
 	#Bones specific stuff
 
 	# :stopdoc:
-	VERSION = '0.1.0'
+	VERSION = '0.2.1'
 	LIBPATH = ::File.expand_path(::File.dirname(__FILE__)) + ::File::SEPARATOR
 	PATH = ::File.dirname(LIBPATH) + ::File::SEPARATOR
 	# :startdoc:

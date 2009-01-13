@@ -1,18 +1,34 @@
-# $Id$
-
 require File.join(File.dirname(__FILE__), %w[spec_helper])
+
+# All of the colour representations will set @green for the tests to run through
 
 describe "every colour", :shared => true do
    it "should convert to RGB" do
+	@green.should respond_to(:to_rgb)	
+	@green.to_rgb.g.should eql(1.0)
+	@green.to_rgb.b.should eql(0.0)
+	@green.to_rgb.r.should eql(0.0)
    end
 
    it "should convert to HSV" do
+	@green.should respond_to(:to_hsv)
+	@green.to_hsv.h.should eql(120.0)
+        @green.to_hsv.s.should eql(1.0)
+        @green.to_hsv.v.should eql(1.0)
    end
 
+   it "should convert to Lab"
+
    it "should convert to CMYK" do
+	# Values from Photoshop
+	@green.to_cmyk.c eql(0.63)
+	@green.to_cmyk.m eql(0.0)
+ 	@green.to_cmyk.y eql(1.0)
+	@green.to_cmyk.k eql(0.0)
    end
 
    it "should provide a Web Safe Hex" do
+	@green.web_safe.should eql("#0F0")
    end
 
    it "should provide a complementary colour" do
@@ -34,4 +50,26 @@ describe "every colour", :shared => true do
    end
 end
 
-# EOF
+describe "CMYK Colours" do
+	it_should_behave_like "every colour"
+
+	before(:each) do
+	   @green = CMYK.new(0.63, 0, 1.0, 0) 
+	end
+end
+
+describe "HSV Colours" do
+	it_should_behave_like "every colour"
+
+	before(:each) do
+	   @green = HSV.new(120, 1.0,1.0)
+	end
+end
+
+describe "RGB Colours" do
+	it_should_behave_like "every colour"
+
+	before(:each) do
+	   @green = RGB.new(0,1.0,0)
+	end
+end
