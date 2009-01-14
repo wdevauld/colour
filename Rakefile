@@ -14,5 +14,5 @@ PROJ.authors = 'Wes Devauld'
 PROJ.email = 'wes@devauld.ca' 
 PROJ.url = 'http://code.devauld.ca/git/colour/'
 PROJ.rubyforge_name = 'colour'
-PROJ.version = '0.2'
+PROJ.version = '0.3'
 PROJ.exclude = %w(.git)
