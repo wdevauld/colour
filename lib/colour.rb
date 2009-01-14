@@ -82,6 +82,35 @@ module Colour
 		end
 	end
 
+
+	def gradient_to(colour, steps=10)
+		c = self.class.name.downcase
+		origin = self.to_rgb
+		destination = colour.to_rgb
+		gradient = []
+
+		#TODO: *_range isn't really being used
+		red_range = destination.r - origin.r
+		red_increment = red_range / steps
+		green_range = destination.g - origin.g
+		green_increment = green_range / steps
+		blue_range = destination.b - origin.b
+		blue_increment = blue_range / steps	
+
+		steps.times do |i|
+			intermediate = RGB.new(
+				origin.r + red_increment * i,
+				origin.g + green_increment * i,
+				origin.b + blue_increment * i
+			)
+			gradient << intermediate.send("to_" + c)
+			if block_given? then
+				yield intermediate.send("to_" + c)
+			end
+		end
+		gradient
+	end
+
 	#Bones specific stuff
 
 	# :stopdoc:

@@ -23,6 +23,10 @@ describe "every colour", :shared => true do
 	@green.web_safe.should eql("#0F0")
    end
 
+   it "should gradient through the RGB space towards another colour" do
+        gradient = @green.gradient_to(RGB.new(1,0,1), steps=3)
+   end
+
    it "should provide a complementary colour" do
    end
 
