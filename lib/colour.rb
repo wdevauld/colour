@@ -159,6 +159,7 @@ Colour.require_all_libs_relative_to __FILE__
 require 'rgb'
 require 'standard_colours'
 require 'hsv'
+require 'gradient'
 
 end  # unless defined?
 
