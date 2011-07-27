@@ -1,5 +1,0 @@
-require 'lib/colour'
-require 'lib/rgb'
-require 'lib/cmyk'
-require 'lib/hsv'
-require 'lib/standard_colours'

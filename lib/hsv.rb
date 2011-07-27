@@ -22,15 +22,15 @@ class HSV
 			q = @v * (1 - @s * f)
 			t = @v * (1 - @s * (1 - f))
 			case i
-				when 0:
+				when 0 then
 					RGB.new(v,t,p)
-				when 1:
+				when 1 then
 					RGB.new(q,v,p)
-				when 2:
+				when 2 then
 					RGB.new(p,v,t)
-				when 3:
+				when 3 then
 					RGB.new(p,q,v)
-				when 4:
+				when 4 then
 					RGB.new(t,p,v)
 				else
 					RGB.new(v,p,q)

@@ -15,5 +15,4 @@ describe Gradient do
         c.to_rgb.b.should eql(0.5)
         c.to_rgb.r.should eql(1.0)
     end
-
 end
