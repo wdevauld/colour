@@ -1,6 +1,6 @@
 green = StandardColoursRGB.green
 
-describe "every colour representation", :shared => true do
+shared_examples "every colour representation", :shared => true do
    it "should convert to RGB" do
 	green.should respond_to(:to_rgb)	
 	green.to_rgb.g.should eql(1.0)

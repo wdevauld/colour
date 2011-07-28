@@ -1,3 +1,5 @@
+require 'spec_helper'
+
 describe "HSV Colours" do
 	it_should_behave_like "every colour representation"
 
