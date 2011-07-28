@@ -1,8 +1,7 @@
-require File.join(File.dirname(__FILE__), %w[spec_helper])
+require 'spec_helper'
 
-# All of the colour representations will set @green for the tests to run through
-
-include StandardColoursRGB
+red = StandardColoursRGB.red
+white = StandardColoursRGB.white
 
 describe Gradient do
     it "should be initialized with two colours" do
