@@ -16,11 +16,15 @@ shared_examples "every colour representation", :shared => true do
    end
 
    it "should provide a Web Safe Hex" do
-	green.web_safe.should eql("#0F0")
+	    green.web_safe.should eql("#0F0")
    end
 
    it "should gradient through the RGB space towards another colour" do
         gradient = green.gradient_to(RGB.new(1,0,1), steps=3)
+        gradient.size.should eql(3)
+        gradient[1].should eql(green)
+        gradient[2].should eql(RGB.new(0.5, 0.5, 0.5))
+        gradient[3].should eql(RGB.new(1,0,0))     
    end
 
    it "should provide a complementary colour"
