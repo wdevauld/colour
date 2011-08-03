@@ -85,13 +85,22 @@ module Colour
         destination = colour.to_rgb
         gradient = []
 
+        #Special Case, if some joker asks for a gradient of one step
+        # the range calculation will result in NaN
+        if steps == 1 then
+           if block_given? then
+             yield self
+           end
+           return [self] 
+        end
+
         #TODO: *_range isn't really being used
         red_range = destination.r - origin.r
-        red_increment = red_range / steps
+        red_increment = red_range / (steps - 1)
         green_range = destination.g - origin.g
-        green_increment = green_range / steps
+        green_increment = green_range / (steps - 1)
         blue_range = destination.b - origin.b
-        blue_increment = blue_range / steps 
+        blue_increment = blue_range / (steps - 1) 
 
         steps.times do |i|
             intermediate = RGB.new(
