@@ -25,18 +25,17 @@ Jeweler::Tasks.new do |gem|
 end
 Jeweler::RubygemsDotOrgTasks.new
 
-require 'rcov/rcovtask'
-Rcov::RcovTask.new do |test|
-  test.libs << 'rspec'
-  test.pattern = 'spec/**/*_spec.rb'
-  test.verbose = true
-  test.rcov_opts << '--exclude "gems/*"'
-end
-
 task :default => :spec
-
 require 'rspec/core/rake_task'
 
-RSpec::Core::RakeTask.new(:spec) do |spec|
-  spec.verbose = false
+RSpec::Core::RakeTask.new(:spec) do |t|
+  t.verbose = false
 end 
+
+require 'rspec'
+desc "Run all specs with rcov"
+RSpec::Core::RakeTask.new(:coverage) do |t|
+  t.rcov = true
+  t.rcov_opts = %w{--exclude gems\/,spec\/} 
+  t.verbose = true
+end
