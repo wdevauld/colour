@@ -18,10 +18,12 @@ Gem::Specification.new do |s|
   ]
   s.files = [
     "Gemfile",
+    "Gemfile.lock",
     "LICENSE.txt",
     "README.txt",
     "Rakefile",
     "VERSION",
+    "colour.gemspec",
     "lib/colour.rb",
     "lib/gradient.rb",
     "lib/hsv.rb",
